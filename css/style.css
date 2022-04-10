@@ -1,0 +1,401 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+* { 
+    margin: 0;  
+    padding: 0;
+}
+ol, ul{
+    list-style: none;
+}
+a{ 
+    outline: 0; 
+    text-decoration: none; 
+}
+img{
+    border: 0;
+}
+body{
+    font: 17px/1.4 "orbitron";
+    letter-spacing: 1px;
+    color: #ddd;
+    background: #000;
+}
+.wrapper{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    perspective: 1300px;
+}
+.wrapper>video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    opacity: 0.5;
+}
+#circle{
+    width: 600px;
+    height: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -400px;
+    margin-left: -300px;
+}
+#circle .swiper-slide{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+#circle .swiper-slide h1{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    font-size: 30px;
+    opacity: 0;
+    transition: all 0.5s;
+}
+#circle .swiper-slide:hover h1{
+    top: -60px;
+    opacity: 1;
+}
+#circle .swiper-slide .inner{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+#circle .swiper-slide .inner>div{
+    /*width: 100%;*/
+    /*height: 100%;*/
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 50px;
+    position: relative;
+    opacity: 0.7;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0,5s;
+}
+#circle .swiper-slide .inner>div:hover{
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.03);
+    opacity: 1;
+}
+#circle .swiper-slide .inner>div:hover i{
+    color: lightcyan;
+    text-shadow: 0px 0px 10px aqua;
+    transition: all 0.5s;
+}
+/*profile*/
+#profile{
+    display: block;
+}
+#profile .inner>div{
+    width: 100%;
+    height: 100%;
+    content: center;
+}
+#profile .inner > div img{
+    
+    width: 200px;
+    height: 200px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+#profile .inner > div h3{
+    color: #fff;
+    margin-bottom: 20px;
+}
+#profile .inner > div p {
+    font: 18px/1.3 "arial";
+    color: #ccc;
+}
+.contact{
+    margin-bottom: 20px;
+    margin-top: 150px;
+}
+.contact li{
+    width: 100%;
+    padding: 10px 0px;
+    border-bottom: 1px solid #eee;
+}
+.contact li:last-child{
+    border-bottom: none;
+}
+.contact li i{
+    width: 20px;
+    text-align: center;
+    color: #555;
+    font-size: 30px;
+    text-shadow: 2px 2px 2px #ddd;
+}
+.contact li span{
+    font-weight: normal;
+    margin-left: 40px;
+    font-size: 25px;
+    font-family: "orbitron";
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+
+
+/*face1*/
+#capacity{
+    display: block;
+}
+
+#capacity .inner>div{
+    width: 290px;
+    height: 254px;
+    float: left;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#capacity .inner>div h2{
+    margin-top: 20px;
+    letter-spacing: 2px;
+    transition: all 0.5s;
+}
+#capacity .inner>div:nth-of-type(odd){
+    margin-right: 20px;
+}
+#capacity .inner>div img{
+    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+/*face2*/
+#work{
+    display: block;
+}
+#work .inner>div{
+    width: 100%;
+    height: 100%;
+
+}
+#work .inner > div img{
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+#work .inner > div h3{
+    color: #fff;
+    margin-bottom: 20px;
+}
+#work .inner > div p {
+    font: 18px/1.3 "arial";
+    color: #ccc;
+}
+#work .inner > div a {
+    font: 18px/1.3 "arial";
+    color: #ccc;
+    margin-top:120px;
+}
+
+/*face3*/
+#introduce{
+    display: block;
+}
+#introduce .inner>div{
+    width: 100%;
+    height: 253px;
+    margin-bottom: 20px;
+}
+#introduce .inner> div .pic{
+    width: 120px;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    overflow: hidden;
+    border-radius: 60px;
+    border: 1px solid #fff;
+    float: left;
+    position: relative;
+    top: 15px;
+    background-size: cover;
+}
+#introduce .inner>div:nth-of-type(1) .pic{
+    background-image: url(../img/together.png);
+}
+#introduce .inner>div:nth-of-type(2) .pic{
+    background-image: url(../img/partnership.png);
+}
+#introduce .inner>div:nth-of-type(3) .pic{
+    background-image: url(../img/passion.png);
+}
+#introduce .inner> div .con{
+    width: 340px;
+    float: right;
+}
+#introduce .inner> div .con h2{
+    color: #fff;
+}
+#introduce .inner> div .con p{
+    font: 18px/1.3 "arial";
+    color: #ddd;
+    margin-top: 20px;
+}
+/*face4*/
+#favorite{
+    display: block;
+}
+
+#favorite .inner>div p{
+    font: 16px/1.3 "arial";
+    color: #bbb;
+    margin-top: 20px;
+    line-height: 30px;
+}
+#favorite .inner>div:nth-of-type(1){
+    width: 100%;
+    height: 530px;
+    margin-bottom: 20px;
+}
+#favorite .inner>div:nth-of-type(1) video{
+    width: 100%;
+    border: 1px solid #fff;
+    margin-bottom: 30px;
+}
+
+#fvsports{
+    width: 100%;
+    height: 250px;
+    margin-bottom: 20px;
+}
+#favorite .inner> div .pic{
+    width: 120px;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    overflow: hidden;
+    border-radius: 60px;
+    border: 1px solid #fff;
+    float: left;
+    position: relative;
+    top: 15px;
+    background-size: cover;
+}
+
+#favorite .inner> div .con{
+    width: 340px;
+    float: right;
+}
+#favorite .inner> div .con h2{
+    color: #fff;
+}
+#favorite .inner> div .con p{
+    font: 18px/1.3 "arial";
+    color: #ddd;
+    margin-top: 20px;
+    line-height: 30px;
+}
+
+/*face5*/
+#Temperature{
+    display: block;
+}
+#Temperature .inner>div:nth-of-type(1){
+    width: 100%;
+    height: 400px;
+    margin-bottom: 20px;
+}
+#Temperature .inner>div:nth-of-type(1) i{
+    color: #fff;
+    font-size: 200px;
+    position: absolute;
+    bottom: 60px;
+    left: 50px;
+    opacity: 0.9;
+}
+#Temperature .inner>div:nth-of-type(1) span{
+    font-weight: bold;
+    font-size: 120px;
+    position: absolute;
+    bottom: 60px;
+    right: 60px;
+}
+#Temperature .inner>div:nth-of-type(1) span em{
+    font: bold normal 60px/1 "arial";
+    position: absolute;
+    right: -20px;
+    top: -20px;
+}
+#Temperature .inner>div:nth-of-type(2){
+    width: 49%;
+    height: 380px;
+    float: left;
+    text-align: center;
+    margin-right: 10px;
+}
+#Temperature .inner>div:nth-of-type(2) i{
+    font-size: 120px;
+    color: #fff;
+    opacity: 0.8;
+}
+#Temperature .inner>div:nth-of-type(2) h3{
+    margin-top: 30px;
+    margin-bottom: 14px;
+    font: bold 20px/1 "orbitron";
+}
+#Temperature .inner>div:nth-of-type(2) p{
+    font: 16px/1 "arial";
+    color: #ccc;
+}
+#Temperature .inner>div:nth-of-type(2) h4{
+    font-size: 40px;
+    margin-top: 20px;
+    letter-spacing: 3px;
+    position: relative;
+}
+
+#Temperature .inner>div:nth-of-type(2) h4 b{
+    font: bold 24px/1 "arial";
+    color: #ddd;
+    position: absolute;
+    top: 0px;
+    right: 40px;
+}
+#Temperature .inner>div:nth-of-type(3){
+    width: 49.25%;
+    height: 380px;
+    float: left;
+    text-align: center;
+}
+
+#Temperature .inner>div:nth-of-type(3) i{
+    font-size: 120px;
+    color: #fff;
+    opacity: 0.8;
+}
+#Temperature .inner>div:nth-of-type(3) h3{
+    margin-top: 30px;
+    margin-bottom: 14px;
+    font: bold 20px/1 "orbitron";
+}
+#Temperature .inner>div:nth-of-type(3) p{
+    font: 16px/1 "arial";
+    color: #ccc;
+}
+#Temperature .inner>div:nth-of-type(3) h4{
+    font-size: 40px;
+    margin-top: 20px;
+    letter-spacing: 3px;
+    position: relative;
+}
+#Temperature .inner>div:nth-of-type(3) h4 b{
+    font: bold 24px/1 "arial";
+    color: #ddd;
+    position: absolute;
+    top: 0px;
+    right: 40px;
+}
+
+

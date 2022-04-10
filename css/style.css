@@ -49,6 +49,7 @@ body{
     position: relative;
     top: 0px;
     left: 0px;
+    margin: auto;
 }
 
 #circle .swiper-slide h1{
@@ -301,6 +302,8 @@ body{
 /*face5*/
 #Temperature{
     display: block;
+}
+#temperature .inner{
 }
 #Temperature .inner>div:nth-of-type(1){
     width: 100%;

@@ -8,10 +8,35 @@
 	<link rel="stylesheet" href="css/style.css" />
 	<script src="https://kit.fontawesome.com/2b947f75e2.js" crossorigin="anonymous"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script defer src="js/main.js"></script>
+	<!--<script defer src="js/main.js"></script>-->
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-	<script src="js/script.js"></script>
+    <script>
+        $(document).ready(() => {
+            var mySwiper = new Swiper('.swiper-container', {
+
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                },
+
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                    draggable: true,
+                },
+
+                slidesPerView: 'auto',
+				spaceBetween: 960,
+				slidesOffsetAfter: 960,
+                infinite: true,
+            });
+        });
+	</script>
 </head>
 <body>
 	<main class="wrapper">
@@ -132,8 +157,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				
+				</div>				
 				<div class="swiper-slide" id="Temperature">
 					<h1>Temperature</h1>
 					<div class="inner">
@@ -156,6 +180,7 @@
 						</div>
 					</div>
 				</div>
+
 			</section>
 			<!-- If we need pagination -->
 			<div class="swiper-pagination"></div>
